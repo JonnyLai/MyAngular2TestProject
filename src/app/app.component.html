@@ -10,7 +10,7 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <app-article *ngFor="let item of data" [item]="item" (delete)="doDelete($event)">
+        <app-article *ngFor="let item of data" [keyword]="title" [item]="item" (delete)="doDelete($event)" >
 
         </app-article>
         <!-- Article END-->
@@ -29,7 +29,7 @@
             <div id="searchbox">
               <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" #inputValue [value]="title" (keyup.enter)="doSearch(inputValue)"
                 (keyup.escape)="doClearn(inputValue)">
-              <input type="button" value="搜尋" id="searchbutton" (click)="doSearch(inputValue)"> {{title}}
+              <input type="button" value="搜尋" id="searchbutton" (click)="doHighlight(inputValue)"> {{title}}
             </div>
           </div>
         </div>

@@ -8,6 +8,10 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class ArticleComponent implements OnInit {
   @Input()
   item: any;
+
+  @Input()
+  keyword:string;
+
   @Output()
   delete = new EventEmitter<any>();
   constructor() { }
