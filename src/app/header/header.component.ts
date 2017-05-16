@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   sitename = 'The Will Will Web - Jonny test';
   siteimg = '/assets/images/logo.png';
+  counter = 0;
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +22,7 @@ export class HeaderComponent implements OnInit {
   changeTitle($event) {
     this.sitename = "Hello Jonny - Clicked";
     console.log($event);
+    this.counter++;
   }
 
 }
