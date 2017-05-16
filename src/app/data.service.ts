@@ -4,7 +4,10 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   constructor() { }
-
+doDelete(item) {
+     let idx = this.data.indexOf(item);
+    this.data.splice(idx, 1);
+  }
 
   data = [
     {

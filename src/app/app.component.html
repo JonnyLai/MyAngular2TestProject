@@ -10,7 +10,7 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <app-article *ngFor="let item of datasvc.data" [keyword]="title" [item]="item" (delete)="doDelete($event)" >
+        <app-article *ngFor="let item of datasvc.data" [keyword]="title" [item]="item" >
 
         </app-article>
         <!-- Article END-->
