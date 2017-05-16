@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  doSearch(input: HTMLInputElement) {
+    this.title = input.value;
+  }
+
+  doClearn(input: HTMLInputElement) {
+    this.title = input.value = "";
+  }
 }
+
+
